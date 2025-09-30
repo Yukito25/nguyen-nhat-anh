@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bùi&nbsp;Tiến&nbsp;Dũng – Thông tin</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    :root {
+      --primary: #4a90e2;
+      --secondary: #50e3c2;
+      --background: #f7f9fc;
+      --text: #333;
+      --light: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: var(--background);
+      color: var(--text);
+      scroll-behavior: smooth;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    a { color: inherit; text-decoration: none; }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: var(--light);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+      z-index: 1000;
+      flex-wrap: wrap;
+    }
+    header .logo { font-size: 1.4rem; font-weight: bold; color: var(--primary); }
+    nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 20px; }
+    nav ul li a { font-weight: 500; color: var(--text); transition: color 0.2s ease; }
+    nav ul li a:hover { color: var(--primary); }
+    .highlight-button { background-color: var(--primary); color: var(--light); padding: 8px 16px; border-radius: 4px; font-weight: 500; transition: background-color 0.2s ease; }
+    .highlight-button:hover { background-color: #357abd; }
+    main {
+      padding: 100px 20px 60px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h1 { color: var(--primary); margin-bottom: 20px; text-align: center; }
+    p { margin-bottom: 10px; }
+    .btn-secondary { display: inline-block; padding: 8px 16px; border-radius: 4px; background-color: var(--light); color: var(--primary); border: 1px solid var(--primary); transition: background-color 0.2s ease; }
+    .btn-secondary:hover { background-color: #eaf5fd; }
+    footer { background-color: #202a3c; color: #ccc; text-align: center; padding: 30px 20px; }
+    footer p { margin: 5px 0; }
+    @media (max-width: 768px) {
+      nav ul { flex-direction: column; gap: 10px; width: 100%; align-items: flex-start; margin-top: 10px; }
+      header { padding: 10px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index.html">Nguyễn Nhật Anh</a></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="about.html">Về tôi</a></li>
+        <li><a href="skills.html">Kỹ năng</a></li>
+        <li><a href="projects.html">Hoạt động</a></li>
+        <li><a href="contact.html">Liên hệ</a></li>
+        <li><a href="favorites.html">Sở thích</a></li>
+      </ul>
+    </nav>
+    <a class="highlight-button" href="contact.html">Liên hệ ngay</a>
+  </header>
+  <main>
+    <h1>Bùi&nbsp;Tiến&nbsp;Dũng</h1>
+    <p><strong>Sinh ngày:</strong> 28/2/1997 – Ngọc&nbsp;Lặc, Thanh&nbsp;Hóa, Việt Nam</p>
+    <p>Bùi&nbsp;Tiến&nbsp;Dũng là thủ môn bóng đá chuyên nghiệp đang chơi cho câu lạc bộ SHB&nbsp;Đà&nbsp;Nẵng tại V.League&nbsp;1. Anh cao 1,81&nbsp;m và từng được coi là một trong những thủ môn xuất sắc nhất của bóng đá Việt Nam ở thời kỳ đỉnh cao【447391062915484†L134-L178】.</p>
+    <p>Tiến&nbsp;Dũng trưởng thành từ lò đào tạo Thanh&nbsp;Hóa và ra mắt chuyên nghiệp vào năm&nbsp;2017. Anh góp phần quan trọng giúp đội tuyển U23 Việt Nam giành ngôi á quân tại VCK U23 châu Á&nbsp;2018 và vô địch AFF Cup&nbsp;2018 cùng đội tuyển quốc gia【447391062915484†L136-L178】.</p>
+    <a class="btn-secondary" href="favorites.html">Quay lại Sở thích</a>
+  </main>
+  <footer>
+    <p>© 2025 – Nguyễn Nhật Anh</p>
+    <p>Mỗi ngày một chút nỗ lực, kiến thức sẽ trở thành sức mạnh.</p>
+  </footer>
+</body>
+</html>
