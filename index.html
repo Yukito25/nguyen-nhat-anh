@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nguyễn Nhật Anh – Portfolio</title>
+  <style>
+    /* Reset and base styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      z-index: 1000;
+    }
+
+    header .logo {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #007bff;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    nav ul li a:hover {
+      color: #007bff;
+    }
+
+    /* Button styles */
+    .btn-primary {
+      background-color: #007bff;
+      color: #fff;
+      padding: 8px 15px;
+      border-radius: 4px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+    }
+
+    .btn-secondary {
+      background-color: #fff;
+      color: #007bff;
+      border: 1px solid #007bff;
+      padding: 8px 15px;
+      border-radius: 4px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .btn-secondary:hover {
+      background-color: #e0e0e0;
+    }
+
+    /* Hero section */
+    .hero {
+      background: linear-gradient(90deg, #2c3e50 0%, #4ca1af 100%);
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .hero .buttons a {
+      margin: 0 10px;
+    }
+
+    /* Sections */
+    main section {
+      padding: 80px 20px;
+    }
+
+    main section:nth-of-type(even) {
+      background-color: #f2f2f2;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      color: #007bff;
+    }
+
+    .about-info,
+    .skills-list,
+    .projects-list,
+    .contact-info {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .about-info p,
+    .contact-info p {
+      margin-bottom: 10px;
+    }
+
+    .skills-list ul,
+    .projects-list ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .skills-list li,
+    .projects-list li {
+      margin-bottom: 10px;
+    }
+
+    .contact-info div {
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Nguyễn Nhật Anh</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Trang chủ</a></li>
+        <li><a href="#about">Về tôi</a></li>
+        <li><a href="#skills">Kỹ năng</a></li>
+        <li><a href="#projects">Hoạt động</a></li>
+        <li><a href="#contact">Liên hệ</a></li>
+      </ul>
+    </nav>
+    <a class="btn-primary" href="#contact">Liên hệ ngay</a>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <h1>Xin chào, tôi là Nguyễn Nhật Anh</h1>
+      <p>Sinh viên Điện Công Nghiệp, đam mê công nghệ và lập trình.</p>
+      <div class="buttons">
+        <a class="btn-primary" href="#about">Xem hồ sơ</a>
+        <a class="btn-secondary" href="#contact">Liên hệ</a>
+      </div>
+    </section>
+
+    <!-- About Me -->
+    <section id="about">
+      <h2 class="section-title">Về tôi</h2>
+      <div class="about-info">
+        <p><strong>Ngày sinh:</strong> 12/10/2005</p>
+        <p><strong>Quê quán:</strong> Hà Tĩnh</p>
+        <p>
+          Tôi đang học Điện Công Nghiệp, đồng thời phát triển kỹ năng lập trình với
+          C++, JavaScript, Python. Ngoài việc học, tôi tham gia cộng đồng game
+          GTA V/FiveM với vai trò Support Server LSC Roleplay.
+        </p>
+        <a class="btn-primary" href="#projects">Xem hoạt động</a>
+      </div>
+    </section>
+
+    <!-- Skills & Learning -->
+    <section id="skills">
+      <h2 class="section-title">Kỹ năng &amp; Học tập</h2>
+      <div class="skills-list">
+        <ul>
+          <li><strong>Điện Công Nghiệp:</strong> đang học</li>
+          <li><strong>Lập trình:</strong> C++, JavaScript, Python</li>
+          <li><strong>Kỹ năng mềm:</strong> teamwork, xử lý tình huống cộng đồng</li>
+        </ul>
+        <a class="btn-primary" href="cv.pdf" download>Tải CV</a>
+      </div>
+    </section>
+
+    <!-- Projects / Activities -->
+    <section id="projects">
+      <h2 class="section-title">Hoạt động &amp; Dự án</h2>
+      <div class="projects-list">
+        <ul>
+          <li>
+            <strong>Support Sever GTA V / FiveM / LSC Roleplay</strong><br />
+            Vai trò: hỗ trợ người chơi, duy trì cộng đồng.<br />
+            <a href="https://discord.gg/lscrp" target="_blank">
+              Discord LSC Roleplay
+            </a>
+          </li>
+        </ul>
+        <a class="btn-primary" href="https://discord.gg/lscrp" target="_blank"
+          >Tham gia ngay</a
+        >
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2 class="section-title">Liên hệ</h2>
+      <div class="contact-info">
+        <p><strong>Facebook:</strong> Nguyễn Nhật Anh</p>
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:gaobac04@gmail.com">gaobac04@gmail.com</a> |
+          <a href="mailto:nhatanhdayne6@gmail.com"
+            >nhatanhdayne6@gmail.com</a
+          > |
+          <a href="mailto:babasuke2005@gmail.com">babasuke2005@gmail.com</a> |
+          <a href="mailto:riyu72611@gmail.com">riyu72611@gmail.com</a>
+        </p>
+        <p><strong>Discord:</strong> Yuki_7874</p>
+      </div>
+      <div>
+        <a class="btn-primary" href="mailto:gaobac04@gmail.com">Gửi Email</a>
+        <a
+          class="btn-secondary"
+          href="https://facebook.com/"
+          target="_blank"
+          >Kết nối Facebook</a
+        >
+        <a class="btn-primary" href="https://discord.gg/lscrp" target="_blank"
+          >Tham gia Discord</a
+        >
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 – Nguyễn Nhật Anh</p>
+    <p>Mỗi ngày một chút nỗ lực, kiến thức sẽ trở thành sức mạnh.</p>
+  </footer>
+</body>
+</html>
