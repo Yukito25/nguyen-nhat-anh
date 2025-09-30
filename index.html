@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nguyễn Nhật Anh – Portfolio</title>
+  <title>Trang chủ – Nguyễn Nhật Anh</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
-    /* CSS Variables for easy color management */
     :root {
       --primary: #4a90e2;
       --secondary: #50e3c2;
@@ -13,12 +13,7 @@
       --text: #333;
       --light: #ffffff;
     }
-
-    /* Reset and base styles */
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -26,20 +21,16 @@
       background-color: var(--background);
       color: var(--text);
       scroll-behavior: smooth;
+      animation: fadeIn 0.6s ease-in-out;
     }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    /* Header */
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    a { color: inherit; text-decoration: none; }
     header {
       position: fixed;
       top: 0;
       width: 100%;
       background-color: var(--light);
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -47,45 +38,12 @@
       z-index: 1000;
       flex-wrap: wrap;
     }
-
-    header .logo {
-      font-size: 1.4rem;
-      font-weight: bold;
-      color: var(--primary);
-    }
-
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 20px;
-    }
-
-    nav ul li a {
-      font-weight: 500;
-      color: var(--text);
-      transition: color 0.2s ease;
-    }
-
-    nav ul li a:hover {
-      color: var(--primary);
-    }
-
-    .highlight-button {
-      background-color: var(--primary);
-      color: var(--light);
-      padding: 8px 16px;
-      border-radius: 4px;
-      font-weight: 500;
-      transition: background-color 0.2s ease;
-    }
-
-    .highlight-button:hover {
-      background-color: #357ABD;
-    }
-
-    /* Buttons */
+    header .logo { font-size: 1.4rem; font-weight: bold; color: var(--primary); }
+    nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 20px; }
+    nav ul li a { font-weight: 500; color: var(--text); transition: color 0.2s ease; }
+    nav ul li a:hover { color: var(--primary); }
+    .highlight-button { background-color: var(--primary); color: var(--light); padding: 8px 16px; border-radius: 4px; font-weight: 500; transition: background-color 0.2s ease; }
+    .highlight-button:hover { background-color: #357abd; }
     .btn-primary,
     .btn-secondary {
       display: inline-block;
@@ -95,27 +53,10 @@
       cursor: pointer;
       transition: background-color 0.2s ease, color 0.2s ease;
     }
-
-    .btn-primary {
-      background-color: var(--primary);
-      color: var(--light);
-    }
-
-    .btn-primary:hover {
-      background-color: #357ABD;
-    }
-
-    .btn-secondary {
-      background-color: var(--light);
-      color: var(--primary);
-      border: 1px solid var(--primary);
-    }
-
-    .btn-secondary:hover {
-      background-color: #eaf5fd;
-    }
-
-    /* Hero section */
+    .btn-primary { background-color: var(--primary); color: var(--light); }
+    .btn-primary:hover { background-color: #357abd; }
+    .btn-secondary { background-color: var(--light); color: var(--primary); border: 1px solid var(--primary); }
+    .btn-secondary:hover { background-color: #eaf5fd; }
     .hero {
       background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
       color: var(--light);
@@ -127,85 +68,15 @@
       text-align: center;
       padding: 0 20px;
     }
-
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 1.25rem;
-      margin-bottom: 30px;
-      max-width: 600px;
-    }
-
-    /* Sections */
-    section {
-      padding: 80px 20px;
-    }
-
-    section:nth-of-type(even) {
-      background-color: var(--light);
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 2rem;
-      color: var(--primary);
-    }
-
-    .content-wrapper {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .content-wrapper p {
-      margin-bottom: 10px;
-    }
-
-    ul.custom-list {
-      list-style: none;
-      padding: 0;
-    }
-
-    ul.custom-list li {
-      margin-bottom: 10px;
-    }
-
-    /* Footer */
-    footer {
-      background-color: #202a3c;
-      color: #ccc;
-      text-align: center;
-      padding: 30px 20px;
-    }
-
-    footer p {
-      margin: 5px 0;
-    }
-
-    /* Responsive */
+    .hero h1 { font-size: 3rem; margin-bottom: 20px; }
+    .hero p { font-size: 1.25rem; margin-bottom: 30px; max-width: 600px; }
+    footer { background-color: #202a3c; color: #ccc; text-align: center; padding: 30px 20px; }
+    footer p { margin: 5px 0; }
     @media (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-        align-items: flex-start;
-        margin-top: 10px;
-      }
-
-      header {
-        padding: 10px 20px;
-      }
-
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-
-      .hero p {
-        font-size: 1rem;
-      }
+      nav ul { flex-direction: column; gap: 10px; width: 100%; align-items: flex-start; margin-top: 10px; }
+      header { padding: 10px 20px; }
+      .hero h1 { font-size: 2.2rem; }
+      .hero p { font-size: 1rem; }
     }
   </style>
 </head>
@@ -214,85 +85,26 @@
     <div class="logo">Nguyễn Nhật Anh</div>
     <nav>
       <ul>
-        <li><a href="#home">Trang chủ</a></li>
-        <li><a href="#about">Về tôi</a></li>
-        <li><a href="#skills">Kỹ năng</a></li>
-        <li><a href="#projects">Hoạt động</a></li>
-        <li><a href="#contact">Liên hệ</a></li>
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="about.html">Về tôi</a></li>
+        <li><a href="skills.html">Kỹ năng</a></li>
+        <li><a href="projects.html">Hoạt động</a></li>
+        <li><a href="contact.html">Liên hệ</a></li>
+        <li><a href="favorites.html">Sở thích</a></li>
       </ul>
     </nav>
-    <a class="highlight-button" href="#contact">Liên hệ ngay</a>
+    <a class="highlight-button" href="contact.html">Liên hệ ngay</a>
   </header>
-
   <main>
-    <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section class="hero">
       <h1>Xin chào, tôi là Nguyễn Nhật Anh</h1>
       <p>Sinh viên Điện Công Nghiệp, đam mê công nghệ và lập trình.</p>
       <div>
-        <a class="btn-primary" href="#about">Xem hồ sơ</a>
-        <a class="btn-secondary" href="#contact">Liên hệ</a>
-      </div>
-    </section>
-
-    <!-- About Me -->
-    <section id="about">
-      <h2 class="section-title">Về tôi</h2>
-      <div class="content-wrapper">
-        <p><strong>Ngày sinh:</strong> 12/10/2005</p>
-        <p><strong>Quê quán:</strong> Hà Tĩnh</p>
-        <p>Tôi đang học Điện Công Nghiệp, đồng thời phát triển kỹ năng lập trình với C++, JavaScript, Python. Ngoài việc học, tôi tham gia cộng đồng game GTA V/FiveM với vai trò Support Server LSC Roleplay.</p>
-        <a class="btn-primary" href="#projects">Xem hoạt động</a>
-      </div>
-    </section>
-
-    <!-- Skills & Learning -->
-    <section id="skills">
-      <h2 class="section-title">Kỹ năng &amp; Học tập</h2>
-      <div class="content-wrapper">
-        <ul class="custom-list">
-          <li><strong>Điện Công Nghiệp:</strong> đang học</li>
-          <li><strong>Lập trình:</strong> C++, JavaScript, Python</li>
-          <li><strong>Kỹ năng mềm:</strong> teamwork, xử lý tình huống cộng đồng</li>
-        </ul>
-        <a class="btn-primary" href="cv.pdf" download>Tải CV</a>
-      </div>
-    </section>
-
-    <!-- Projects / Activities -->
-    <section id="projects">
-      <h2 class="section-title">Hoạt động &amp; Dự án</h2>
-      <div class="content-wrapper">
-        <ul class="custom-list">
-          <li>
-            <strong>Support Sever GTA V / FiveM / LSC Roleplay</strong><br />
-            Vai trò: hỗ trợ người chơi, duy trì cộng đồng.<br />
-            <a href="https://discord.gg/lscroleplay" target="_blank">Discord LSC Roleplay</a>
-          </li>
-        </ul>
-        <a class="btn-primary" href="https://discord.gg/lscroleplay" target="_blank">Tham gia ngay</a>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-      <h2 class="section-title">Liên hệ</h2>
-      <div class="content-wrapper">
-        <p><strong>Facebook:</strong> Nguyễn Nhật Anh</p>
-        <p>
-          <strong>Email:</strong>
-          <a href="mailto:gaobac04@gmail.com">gaobac04@gmail.com</a> | <a href="mailto:nhatanhdayne6@gmail.com">nhatanhdayne6@gmail.com</a> | <a href="mailto:babasuke2005@gmail.com">babasuke2005@gmail.com</a> | <a href="mailto:riyu72611@gmail.com">riyu72611@gmail.com</a>
-        </p>
-        <p><strong>Discord:</strong> Yuki_7874</p>
-        <div>
-          <a class="btn-primary" href="mailto:gaobac04@gmail.com">Gửi Email</a>
-          <a class="btn-secondary" href="https://facebook.com/" target="_blank">Kết nối Facebook</a>
-          <a class="btn-primary" href="https://discord.gg/lscroleplay" target="_blank">Tham gia Discord</a>
-        </div>
+        <a class="btn-primary" href="about.html">Xem hồ sơ</a>
+        <a class="btn-secondary" href="contact.html">Liên hệ</a>
       </div>
     </section>
   </main>
-
   <footer>
     <p>© 2025 – Nguyễn Nhật Anh</p>
     <p>Mỗi ngày một chút nỗ lực, kiến thức sẽ trở thành sức mạnh.</p>
